@@ -1,0 +1,112 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: 'Patua One';
+	color: white;
+}
+
+/*
+html {
+  background: url(images/pexels-photo-220072.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+
+html::before {
+  content: ' ';
+  display: block;
+  background-image: url("images/pexels-photo-220072.jpeg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: -10;
+}
+*/
+
+body {
+  background-image: url("images/pexels-photo-220072.jpeg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+.container {
+	display: grid;
+	width: 80%;
+  min-width: 700px;
+	grid-template: 4fr 4fr 4fr 4fr 1fr / repeat(3, 1fr);
+	grid-gap: 15px;
+	margin: 20px auto;
+	grid-template-areas: "feature feature a"
+                       "feature feature b"
+                       "c d e"
+                       "f g h"
+                       "footer footer footer";
+}
+
+.card {
+	padding: 10px;
+	background-color: rgba(20, 20, 20, 0.5);
+}
+
+header {
+  display: block;
+  width: 80%;
+  min-width: 700px;
+  margin: 10px auto;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.sidebar {grid-area: sidebar;}
+
+.feature {grid-area: feature;}
+
+.a {grid-area: a;}
+
+.b {grid-area: b;}
+
+.c {grid-area: c;}
+
+.d {grid-area: d;}
+
+.e {grid-area: e;}
+
+.f {grid-area: f;}
+
+.g {grid-area: g;}
+
+.h {grid-area: h;}
+
+footer {grid-area: footer;}
+
+footer div {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0px 20px;
+}
+
+footer .contact {
+	font-size: 20px;
+}
+
+.feature img {
+  float: left;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.feature p {
+  margin-top: 10px;
+}
