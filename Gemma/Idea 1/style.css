@@ -26,7 +26,7 @@ header {
   color: white;
   padding-top: 30px;
   min-height: 70px;
-  border-bottom: purple solid 3px;
+  border-bottom: #eb009f solid 3px;
 }
 
 header a {
@@ -38,9 +38,10 @@ header a {
 
 header li {
   float: left;
-  display: inline-block;
+  list-style-type: none;
   min-width: 50px;
   padding: 0 20px;
+  text-decoration: none;
 }
 
 header #branding {
@@ -57,7 +58,7 @@ header nav {
 }
 
 header .current a, header .highlight {
-  color: deeppink;
+  color: #eb009f;
   font-weight: bold;
 }
 
@@ -83,6 +84,23 @@ header a:hover {
 
 #showcase p {
   font-size: 20px;
+  font-weight: bold;
+}
+
+/* Midbreak */
+
+#midbreak {
+  min-height: 50px;
+  background-color: rgb(20, 20, 20);
+  text-align: center;
+  border-top: solid 3px #eb009f;
+  border-bottom: solid 3px #eb009f;
+}
+
+#midbreak p {
+  color: white;
+  font-style: italic;
+  padding: 10px 0;
 }
 
 
@@ -92,13 +110,45 @@ header a:hover {
   margin-top: 20px;
 }
 
+/*
 #overview .box {
   float: left;
   width: 30%;
-  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border: 1px #9E0D87 solid;
+  background: #9E0D87;
+  border-radius: 10px;
+}
+*/
+
+#overview .box {
+  background-color: rgb(195, 0, 119);
+  color: white;
+  border-radius: 10px;
+}
+
+#overview .grid {
+  display: grid;
+  width: 80%;
+  grid-template: 1fr / repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 20px auto;
+  grid-template-areas: "a b c";
   text-align: center;
 }
 
+#overview #a {
+  grid-area: a;
+}
+
+#overview #b {
+  grid-area: b;
+}
+
+#overview #c {
+  grid-area: c;
+}
 
 /* Footer */
 
@@ -107,7 +157,7 @@ footer {
   margin-top: 20px;
   color: white;
   background-color: rgb(20, 20, 20);
-  border-top: purple 3px solid;
+  border-top: #eb009f 3px solid;
   text-align: center;
 }
 
@@ -117,11 +167,14 @@ footer {
 @media(max-width: 768px){
   header #branding,
   header nav,
-  header nav li,
-  #overview .box {
+  header nav li {
     float: none;
     text-align: center;
     width: 100%;
+  }
+
+  header nav li {
+    padding: 0;
   }
 
   header {
@@ -132,4 +185,21 @@ footer {
   #showcase h1 {
     margin-top: 40px;
   }
+
+  #overview .grid {
+    grid-template: repeat(3, 1fr) / 1fr;
+    grid-template-areas: "a"
+                         "b"
+                         "c";
+    width: 95%;
+  }
+
+/*
+  #overview .box {
+    float: none;
+    text-align: center;
+    width: 95%;
+    margin: 10px auto;
+  }
+*/
 }
