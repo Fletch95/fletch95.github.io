@@ -129,14 +129,16 @@ header a:hover {
 */
 
 #overview .box {
-  background-color: rgb(195, 0, 119);
+  background-color: rgb(20, 20, 20);
   color: white;
   border-radius: 10px;
+  border: #eb009f solid 2px;
+  padding: 0 5px;
 }
 
 #overview .grid {
   display: grid;
-  width: 80%;
+  width: 90%;
   grid-template: 1fr / repeat(3, 1fr);
   grid-gap: 10px;
   margin: 20px auto;
